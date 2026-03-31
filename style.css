@@ -235,3 +235,40 @@ figcaption {
   font-size: 1.4rem;
   color: var(--color-muted);
 }
+
+.page-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.page-cards > h2 {
+  grid-column: 1 / -1;
+}
+
+.page-cards .card {
+  transition: transform 0.2s;
+}
+
+.page-cards .card:hover {
+  transform: translateY(-4px);
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+aside {
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  border: 0.1rem solid var(--color-accent);
+  border-radius: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .two-column-layout {
+    grid-template-columns: 1fr 280px;
+  }
+}
