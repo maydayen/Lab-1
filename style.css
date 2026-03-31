@@ -3,12 +3,11 @@
    tablet:   @media (min-width: 600px)
    desktop:  @media (min-width: 1024px) */
 
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap');
 
 :root {
   --color-primary: #1a1a2e;
-  --color-secondary: #16213e;
+  --color-secondary: #5C6B9C;
 
   --color-accent: #e8d5b7;
   --color-accent-2: #d4af37;
@@ -16,6 +15,7 @@
   --color-text: #1a1a1a;
   --color-muted: #666666;
   --color-surface: #f5f4f0;
+  --color-white: #ffffff;
 
   --font-body: 'Lora', serif;
   --font-heading: 'Playfair Display', serif;
@@ -24,8 +24,6 @@
   --space-md: 1.5rem;
   --space-lg: 3rem;
 }
-
-/* CSS RESET */
 
 *,
 *::before,
@@ -40,17 +38,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-
   font-family: var(--font-body);
   font-size: 1.6rem;
-
   color: var(--color-text);
   background-color: var(--color-surface);
 }
 
-/* TASK 2 Typography, Colour & Box Model */
-
-/* TYPOGRAPHY */
 h1,
 h2,
 h3,
@@ -62,21 +55,10 @@ h4 {
   margin-bottom: var(--space-md);
 }
 
-h1 {
-  font-size: 3.2rem;
-}
-
-h2 {
-  font-size: 2.6rem;
-}
-
-h3 {
-  font-size: 2.1rem;
-}
-
-h4 {
-  font-size: 1.8rem;
-}
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2.1rem; }
+h4 { font-size: 1.8rem; }
 
 p {
   font-size: 1.6rem;
@@ -97,11 +79,8 @@ blockquote {
   line-height: 1.6;
   color: var(--color-secondary);
   background-color: var(--color-white);
-
   padding: var(--space-md);
-
   margin: var(--space-md) 0;
-
   border-left: 0.4rem solid var(--color-accent-2);
   border-radius: 0.8rem;
 }
@@ -125,22 +104,23 @@ caption {
 header {
   background-color: var(--color-primary);
   color: var(--color-white);
-
   padding: var(--space-lg);
+}
+
+header h1,
+header p {
+  color: var(--color-white);
 }
 
 nav {
   background-color: var(--color-secondary);
-  color: var(--color-white);
-
+  color: var(--color-text);
   padding: var(--space-md);
 }
 
 main {
   background-color: var(--color-surface);
-
   padding: var(--space-lg);
-
   margin: var(--space-md);
 }
 
@@ -154,6 +134,9 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
 }
 
 nav li {
@@ -162,30 +145,20 @@ nav li {
 
 nav a {
   text-decoration: none;
-
-  /* padding makes links easier to click */
   padding: var(--space-sm) var(--space-md);
-
   border-radius: 0.8rem;
   display: inline-block;
+  color: beige;
 }
 
-a:link {
-  color: var(--color-accent);
-}
-
-a:visited {
-  color: var(--color-accent-2);
-}
-
-a:hover {
-  color: var(--color-white);
+nav a:hover {
   background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
-a:active {
-  color: var(--color-primary);
+nav a:active {
   background-color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 section {
