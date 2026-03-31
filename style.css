@@ -47,3 +47,196 @@ body {
   color: var(--color-text);
   background-color: var(--color-surface);
 }
+
+/* TASK 2 Typography, Colour & Box Model */
+
+/* TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+small {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+blockquote {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: var(--color-secondary);
+  background-color: var(--color-white);
+
+  padding: var(--space-md);
+
+  margin: var(--space-md) 0;
+
+  border-left: 0.4rem solid var(--color-accent-2);
+  border-radius: 0.8rem;
+}
+
+code {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+caption {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+  margin-bottom: var(--space-sm);
+}
+
+header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  padding: var(--space-lg);
+}
+
+nav {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+
+  padding: var(--space-md);
+}
+
+main {
+  background-color: var(--color-surface);
+
+  padding: var(--space-lg);
+
+  margin: var(--space-md);
+}
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-md);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: var(--space-sm);
+}
+
+nav a {
+  text-decoration: none;
+
+  /* padding makes links easier to click */
+  padding: var(--space-sm) var(--space-md);
+
+  border-radius: 0.8rem;
+  display: inline-block;
+}
+
+a:link {
+  color: var(--color-accent);
+}
+
+a:visited {
+  color: var(--color-accent-2);
+}
+
+a:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+a:active {
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+}
+
+section {
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+  border: 0.1rem solid var(--color-accent);
+  border-radius: 1rem;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  border: 0.1rem solid var(--color-accent);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.8rem var(--color-accent);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  padding: var(--space-sm) var(--space-md);
+  border: 0.1rem solid var(--color-secondary);
+  border-radius: 0.8rem;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  padding: var(--space-sm);
+  border: 0.1rem solid var(--color-muted);
+  border-radius: 0.8rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0.2rem solid var(--color-accent);
+  border-radius: 0.8rem;
+  margin-bottom: var(--space-sm);
+}
+
+figcaption {
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
