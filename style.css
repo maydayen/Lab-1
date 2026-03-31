@@ -1,0 +1,62 @@
+/* ============================================
+   BREAKPOINTS
+   mobile-first base: 320px and up (default)
+   tablet:   @media (min-width: 600px)
+   desktop:  @media (min-width: 1024px)
+   ============================================ */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap');
+
+/* ============================================
+   DESIGN TOKENS (CSS VARIABLES)
+   ============================================ */
+
+:root {
+  /* primary colours */
+  --color-primary: #1a1a2e;
+  --color-secondary: #16213e;
+
+  /* accent colours */
+  --color-accent: #e8d5b7;
+  --color-accent-2: #d4af37;
+
+  /* neutral colours */
+  --color-text: #1a1a1a;
+  --color-muted: #666666;
+  --color-surface: #f5f4f0;
+
+  /* fonts */
+  --font-body: 'Lora', serif;
+  --font-heading: 'Playfair Display', serif;
+
+  /* spacing */
+  --space-sm: 0.5rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+}
+
+/* ============================================
+   CSS RESET
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
