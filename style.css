@@ -106,8 +106,10 @@ header {
   color: var(--color-white);
   padding: var(--space-lg);
   display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
 }
 
 header h1,
@@ -122,6 +124,11 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
 }
 
 main {
@@ -131,8 +138,8 @@ main {
 }
 
 footer {
-  background-color: beige;
-  color: black;
+  background-color: var(--color-accent);
+  color: var(--color-text);
   padding: var(--space-md);
 }
 
