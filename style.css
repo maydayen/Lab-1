@@ -105,17 +105,23 @@ header {
   background-color: var(--color-primary);
   color: var(--color-white);
   padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
 header h1,
 header p {
   color: var(--color-white);
+  margin: 0;
 }
 
 nav {
   background-color: var(--color-secondary);
-  color: var(--color-text);
   padding: var(--space-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 main {
@@ -125,8 +131,8 @@ main {
 }
 
 footer {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: beige;
+  color: black;
   padding: var(--space-md);
 }
 
@@ -135,12 +141,13 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: var(--space-md);
   justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
 }
 
 nav li {
-  margin-bottom: var(--space-sm);
+  margin-bottom: 0;
 }
 
 nav a {
@@ -148,7 +155,8 @@ nav a {
   padding: var(--space-sm) var(--space-md);
   border-radius: 0.8rem;
   display: inline-block;
-  color: beige;
+  color: black;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 nav a:hover {
@@ -159,6 +167,13 @@ nav a:hover {
 nav a:active {
   background-color: var(--color-accent);
   color: var(--color-primary);
+}
+
+nav a.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 section {
