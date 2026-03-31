@@ -1,7 +1,9 @@
-/* BREAKPOINTS
-   mobile-first base: 320px and up (default)
-   tablet:   @media (min-width: 600px)
-   desktop:  @media (min-width: 1024px) */
+/* ============================================ 
+BREAKPOINTS 
+mobile-first base: 320px and up (default) 
+tablet:   @media (min-width: 600px) 
+desktop:  @media (min-width: 1024px) 
+============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap');
 
@@ -272,3 +274,41 @@ aside {
     grid-template-columns: 1fr 280px;
   }
 }
+
+/* Tablet layout */
+@media (min-width: 600px) {
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .page-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+
+  .page-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .two-column-layout {
+    grid-template-columns: 1fr 280px;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+  }
+
+}
+
