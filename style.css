@@ -103,6 +103,10 @@ caption {
   margin-bottom: var(--space-sm);
 }
 
+/* Header component
+   Padding creates space inside the header so the text does not touch the edges.
+   Margin is not used here because we want the header to stay attached to the page edges. */
+
 header {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -120,6 +124,10 @@ header p {
   margin: 0;
 }
 
+/* Navigation component
+   Padding is used to create space inside the navigation bar around the links.
+   Margin is avoided so the navbar stays connected to the header. */
+
 nav {
   background-color: var(--color-secondary);
   padding: var(--space-md);
@@ -132,6 +140,11 @@ nav {
   flex-wrap: wrap;
   gap: var(--space-md);
 }
+
+/* Main layout container
+   Padding creates space inside the main content area.
+   Margin creates space between the main content and the edges of the page.
+*/
 
 main {
   background-color: var(--color-surface);
@@ -185,6 +198,10 @@ nav a.active {
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
+/* Section component
+   Padding creates internal spacing between the content and the border.
+   Margin creates space between different sections so they do not touch each other. */
+
 section {
   background-color: var(--color-white);
   padding: var(--space-md);
@@ -192,6 +209,10 @@ section {
   border: 0.1rem solid var(--color-accent);
   border-radius: 1rem;
 }
+
+/* Card component
+   Padding keeps text inside the card away from the edges.
+   Margin separates each card from other cards or sections on the page. */
 
 .card {
   background-color: var(--color-white);
@@ -312,3 +333,99 @@ aside {
 
 }
 
+form {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  border: 0.1rem solid var(--color-accent);
+  border-radius: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  padding: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border: 0.1rem solid var(--color-muted);
+  border-radius: 0.8rem;
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem var(--color-accent);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: var(--color-primary);
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
+  transform: scale(0.97);
+}
+
+blockquote::before {
+  content: '" ';
+  color: var(--color-accent-2);
+  font-size: 2.4rem;
+}
+
+h2::before {
+  content: "| ";
+  color: var(--color-accent-2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+}
+
+th,
+td {
+  border: 0.1rem solid var(--color-muted);
+  padding: var(--space-sm);
+  text-align: left;
+}
+
+caption {
+  margin-bottom: var(--space-sm);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-surface);
+}
+
+#Top-Skills li {
+  border-top: 0.1rem solid var(--color-accent);
+  border-bottom: 0.1rem solid var(--color-accent);
+  padding: var(--space-sm);
+}
+
+#Top-Skills li:first-child {
+  border-top: none;
+}
+
+#Top-Skills li:last-child {
+  border-bottom: none;
+}
