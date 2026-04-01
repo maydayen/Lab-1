@@ -236,14 +236,16 @@ input[type="reset"] {
   cursor: pointer;
 }
 
-input,
-textarea,
-select {
-  font-family: var(--font-body);
-  font-size: 1.6rem;
-  padding: var(--space-sm);
-  border: 0.1rem solid var(--color-muted);
-  border-radius: 0.8rem;
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: var(--space-sm);
+  vertical-align: middle;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  vertical-align: middle;
 }
 
 img {
