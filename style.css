@@ -1,0 +1,433 @@
+/* ============================================ 
+BREAKPOINTS 
+mobile-first base: 320px and up (default) 
+tablet:   @media (min-width: 600px) 
+desktop:  @media (min-width: 1024px) 
+============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap');
+
+:root {
+  --color-primary: #1a1a2e;
+  --color-secondary: #5C6B9C;
+
+  --color-accent: #e8d5b7;
+  --color-accent-2: #d4af37;
+
+  --color-text: #1a1a1a;
+  --color-muted: #666666;
+  --color-surface: #f5f4f0;
+  --color-white: #ffffff;
+
+  --font-body: 'Lora', serif;
+  --font-heading: 'Playfair Display', serif;
+
+  --space-sm: 0.5rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2.1rem; }
+h4 { font-size: 1.8rem; }
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+small {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+blockquote {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: var(--color-secondary);
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+  border-left: 0.4rem solid var(--color-accent-2);
+  border-radius: 0.8rem;
+}
+
+code {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+caption {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+  margin-bottom: var(--space-sm);
+}
+
+/* Header component
+   Padding creates space inside the header so the text does not touch the edges.
+   Margin is not used here because we want the header to stay attached to the page edges. */
+
+header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+header h1,
+header p {
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* Navigation component
+   Padding is used to create space inside the navigation bar around the links.
+   Margin is avoided so the navbar stays connected to the header. */
+
+nav {
+  background-color: var(--color-secondary);
+  padding: var(--space-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+/* Main layout container
+   Padding creates space inside the main content area.
+   Margin creates space between the main content and the edges of the page.
+*/
+
+main {
+  background-color: var(--color-surface);
+  padding: var(--space-lg);
+  margin: var(--space-md);
+}
+
+footer {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  padding: var(--space-md);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+nav li {
+  margin-bottom: 0;
+}
+
+nav a {
+  text-decoration: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 0.8rem;
+  display: inline-block;
+  color: black;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+nav a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+nav a:active {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+nav a.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Section component
+   Padding creates internal spacing between the content and the border.
+   Margin creates space between different sections so they do not touch each other. */
+
+section {
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+  border: 0.1rem solid var(--color-accent);
+  border-radius: 1rem;
+}
+
+/* Card component
+   Padding keeps text inside the card away from the edges.
+   Margin separates each card from other cards or sections on the page. */
+
+.card {
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  border: 0.1rem solid var(--color-accent);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.8rem var(--color-accent);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  padding: var(--space-sm) var(--space-md);
+  border: 0.1rem solid var(--color-secondary);
+  border-radius: 0.8rem;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: var(--space-sm);
+  vertical-align: middle;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0.2rem solid var(--color-accent);
+  border-radius: 0.8rem;
+  margin-bottom: var(--space-sm);
+}
+
+figcaption {
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
+
+.page-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.page-cards > h2 {
+  grid-column: 1 / -1;
+}
+
+.page-cards .card {
+  transition: transform 0.2s;
+}
+
+.page-cards .card:hover {
+  transform: translateY(-4px);
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+aside {
+  background-color: var(--color-white);
+  padding: var(--space-md);
+  border: 0.1rem solid var(--color-accent);
+  border-radius: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .two-column-layout {
+    grid-template-columns: 1fr 280px;
+  }
+}
+
+/* Tablet layout */
+@media (min-width: 600px) {
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .page-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+
+  .page-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .two-column-layout {
+    grid-template-columns: 1fr 280px;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+  }
+
+}
+
+form {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  border: 0.1rem solid var(--color-accent);
+  border-radius: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  padding: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border: 0.1rem solid var(--color-muted);
+  border-radius: 0.8rem;
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem var(--color-accent);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: var(--color-primary);
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
+  transform: scale(0.97);
+}
+
+blockquote::before {
+  content: '" ';
+  color: var(--color-accent-2);
+  font-size: 2.4rem;
+}
+
+h2::before {
+  content: "| ";
+  color: var(--color-accent-2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+}
+
+th,
+td {
+  border: 0.1rem solid var(--color-muted);
+  padding: var(--space-sm);
+  text-align: left;
+}
+
+caption {
+  margin-bottom: var(--space-sm);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-surface);
+}
+
+#Top-Skills li {
+  border-top: 0.1rem solid var(--color-accent);
+  border-bottom: 0.1rem solid var(--color-accent);
+  padding: var(--space-sm);
+}
+
+#Top-Skills li:first-child {
+  border-top: none;
+}
+
+#Top-Skills li:last-child {
+  border-bottom: none;
+}

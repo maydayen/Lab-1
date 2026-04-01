@@ -3,39 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="About me description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>About Me</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>About Me</h1>
+	<header>
+		<h1>About Me</h1>
+	</header>
+
 	<nav>
+		<span class="logo">Lee May Yan</span>
 		<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="skills.html">Skills</a></li>
-		<li><a href="academic.html">Academic</a></li>
-		<li><a href="projects.html">Projects</a></li>
-		<li><a href="contact.html">Contact</a></li>
-	</ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html" class="active">About</a></li>
+			<li><a href="skills.html">Skills</a></li>
+			<li><a href="academic.html">Academic</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
 	</nav>
-	
-	<p>I am a <strong>second-year software engineering student</strong> who <em>enjoys learning programming.</em> </p>
 
-	<h2>Education</h2>
-	<h3>Previous Education</h3>
-	<h4><b>Pre-U</b>: Johor Matriculation College</h4>
-	<p>I studied in <i>physical science</i> during my Pre-U</p>
-	
-	<!-- <strong> and <em> are used to convey importance, while <b> and <i> are only for visual bold -->
+	<main class="two-column-layout">
+		<section>
+			<p>I am a <strong>second-year software engineering student</strong> who <em>enjoys learning programming.</em></p>
 
-	<blockquote cite="https://quoteinvestigator.com/2015/07/23/great-power/">With Great Power Comes Great Responsibility </blockquote>
-	<p><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is the standard markup language for creating web pages.</p>
+			<h3>Previous Education</h3>
+			<h4>Pre-U: Johor Matriculation College</h4>
+			<p>I studied in <i>physical science</i> during my Pre-U.</p>
 
-	<p> Subscripted text: H<sub>2</sub>O <br>
-		Superscripted text: X<sup>2</sup></p>
+			<p><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is the standard markup language for creating web pages.</p>
 
-	<p><mark>Goal</mark>: Become a respected software engineer</p>
+			<p>
+				Subscripted text: H<sub>2</sub>O <br>
+				Superscripted text: X<sup>2</sup>
+			</p>
 
-	<small>© 2026 Lee May Yan</small>
+			<p><mark>Goal</mark>: Become a respected software engineer</p>
+		</section>
 
+		<aside>
+			<h2>Quote</h2>
+			<blockquote cite="https://quoteinvestigator.com/2015/07/23/great-power/">
+				With Great Power Comes Great Responsibility
+			</blockquote>
+		</aside>
+	</main>
+
+	<footer>
+		<small>© 2026 Lee May Yan</small>
+	</footer>
 </body>
 </html>
